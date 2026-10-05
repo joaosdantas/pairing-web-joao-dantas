@@ -1,0 +1,19 @@
+{
+	"core": "https://wordpress.org/wordpress-7.0.2.zip",
+	"phpVersion": "8.3",
+	"testsEnvironment": false,
+	"themes": [
+		"./theme/infleet"
+	],
+	"mappings": {
+		"wp-content/mu-plugins": "./mu-plugins",
+		"wp-content/seed": "./seed"
+	},
+	"config": {
+		"WP_DEBUG": true,
+		"WP_DEBUG_DISPLAY": true,
+		"WP_DEBUG_LOG": true,
+		"SCRIPT_DEBUG": true,
+		"WP_ENVIRONMENT_TYPE": "local"
+	}
+}

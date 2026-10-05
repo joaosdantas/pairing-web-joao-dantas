@@ -1,0 +1,173 @@
+:root {
+	--infleet-azul: #0b2f5e;
+	--infleet-azul-claro: #1d6fd0;
+	--infleet-verde: #17c07b;
+	--infleet-texto: #17202b;
+	--infleet-cinza: #5c6b7a;
+	--infleet-borda: #dde3ea;
+	--infleet-fundo: #f6f8fb;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	color: var(--infleet-texto);
+	background: #fff;
+	line-height: 1.6;
+}
+
+a {
+	color: var(--infleet-azul-claro);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+/* Cabecalho */
+
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: #fff;
+	border-bottom: 1px solid var(--infleet-borda);
+	transition: box-shadow 0.2s ease;
+}
+
+.site-header--compact {
+	box-shadow: 0 2px 12px rgba(11, 47, 94, 0.08);
+}
+
+.site-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 68px;
+	gap: 24px;
+}
+
+.site-logo {
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 0.04em;
+	color: var(--infleet-azul);
+	text-decoration: none;
+}
+
+.site-nav ul {
+	display: flex;
+	gap: 24px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-nav a {
+	color: var(--infleet-cinza);
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.site-nav a:hover {
+	color: var(--infleet-azul);
+}
+
+/* Home */
+
+.home-hero {
+	background: linear-gradient(160deg, var(--infleet-azul) 0%, #123f7d 100%);
+	color: #fff;
+	padding: 88px 0 96px;
+}
+
+.home-hero__eyebrow {
+	margin: 0 0 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	font-size: 13px;
+	color: var(--infleet-verde);
+}
+
+.home-hero__title {
+	margin: 0 0 16px;
+	font-size: clamp(30px, 5vw, 46px);
+	line-height: 1.15;
+	max-width: 20ch;
+}
+
+.home-hero__lead {
+	margin: 0;
+	max-width: 56ch;
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.86);
+}
+
+/* Conteudo */
+
+.entry-content,
+.page {
+	padding: 56px 0 72px;
+}
+
+.entry-content h2 {
+	font-size: 28px;
+	margin: 40px 0 12px;
+	color: var(--infleet-azul);
+}
+
+.entry-content h3 {
+	font-size: 20px;
+	margin: 28px 0 8px;
+}
+
+.entry-content ul {
+	padding-left: 20px;
+}
+
+.page__title {
+	font-size: clamp(28px, 4vw, 40px);
+	color: var(--infleet-azul);
+	margin: 0 0 8px;
+}
+
+/* Landing */
+
+.landing__copy {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 48px 24px 8px;
+}
+
+/* Rodape */
+
+.site-footer {
+	margin-top: 72px;
+	padding: 40px 0;
+	background: var(--infleet-fundo);
+	border-top: 1px solid var(--infleet-borda);
+	font-size: 14px;
+	color: var(--infleet-cinza);
+}
+
+.site-footer__brand {
+	margin: 0 0 4px;
+	font-weight: 700;
+	color: var(--infleet-azul);
+}
+
+.site-footer__legal {
+	margin: 0;
+}
