@@ -874,16 +874,23 @@ function infleet_cl_save_form_field_ajax() {
 	}
 
 	if ( 'campaign' === $field ) {
-		$form   = get_post( $form_id );
-		$slug   = infleet_cl_clean_campaign( (string) $value );
-		$term   = term_exists( $slug, 'infleet_campaign' );
+		$form = get_post( $form_id );
+		$slug = infleet_cl_clean_campaign( (string) $value );
+
+		$term = $slug
+			? get_term_by( 'slug', $slug, 'infleet_campaign', ARRAY_A )
+			: false;
+
 		if ( ! $term ) {
 			$term = wp_insert_term( ucfirst( str_replace( '-', ' ', $slug ) ), 'infleet_campaign', array( 'slug' => $slug ) );
+			if ( is_wp_error( $term ) ) {
+				wp_send_json_error( array( 'message' => 'Campanha inválida.' ), 400 );
+			}
+			$term_id = (int) $term['term_id'];
+		} else {
+			$term_id = (int) $term['term_id'];
 		}
-		if ( is_wp_error( $term ) ) {
-			wp_send_json_error( array( 'message' => 'Campanha inválida.' ), 400 );
-		}
-		$term_id = is_array( $term ) ? $term['term_id'] : (int) $term;
+
 		wp_set_object_terms( $form_id, $term_id, 'infleet_campaign' );
 
 		wp_send_json_success( array( 'form' => infleet_cl_form_payload_row( $form ) ) );
