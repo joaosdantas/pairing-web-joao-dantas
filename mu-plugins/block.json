@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "infleet/lead-form",
+  "title": "Formulário de Leads",
+  "category": "widgets",
+  "icon": "email-alt",
+  "description": "Captura de contato para páginas de campanha.",
+  "keywords": ["lead", "contato", "formulário", "campanha"],
+  "attributes": {
+    "title": { "type": "string", "default": "Receba nossas novidades" },
+    "subtitle": { "type": "string", "default": "" },
+    "buttonText": { "type": "string", "default": "Quero receber" },
+    "successMessage": { "type": "string", "default": "Obrigado! Entraremos em contato." },
+    "campaign": { "type": "string", "default": "geral" },
+    "showPhone": { "type": "boolean", "default": true },
+    "consentText": {
+      "type": "string",
+      "default": "Concordo em receber contatos e com o tratamento dos meus dados conforme a política de privacidade."
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "editorScript": "infleet-lead-form-editor",
+  "style": "infleet-lead-form"
+}

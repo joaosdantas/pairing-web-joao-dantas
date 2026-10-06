@@ -1,0 +1,51 @@
+.wp-block-infleet-lead-form {
+	max-width: 520px;
+	margin: 0 auto;
+	padding: 1.5rem;
+}
+
+.wp-block-infleet-lead-form label,
+.wp-block-infleet-lead-form .infleet-fake {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.wp-block-infleet-lead-form input[type="text"],
+.wp-block-infleet-lead-form input[type="email"],
+.wp-block-infleet-lead-form input[type="tel"] {
+	display: block;
+	width: 100%;
+	padding: 0.6rem;
+	margin-top: 0.25rem;
+	box-sizing: border-box;
+}
+
+.wp-block-infleet-lead-form .infleet-consent {
+	font-size: 0.85rem;
+}
+
+.wp-block-infleet-lead-form button,
+.wp-block-infleet-lead-form .infleet-btn-preview {
+	display: inline-block;
+	padding: 0.7rem 1.4rem;
+	cursor: pointer;
+	background: #1d4ed8;
+	color: #fff;
+	border: 0;
+}
+
+/* Honeypot: fora da tela, invisível para pessoas. */
+.wp-block-infleet-lead-form .infleet-hp {
+	position: absolute;
+	left: -9999px;
+	height: 0;
+	overflow: hidden;
+}
+
+.infleet-msg--ok {
+	color: #166534;
+}
+
+.infleet-msg--erro {
+	color: #b91c1c;
+}
