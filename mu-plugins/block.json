@@ -8,6 +8,7 @@
   "description": "Captura de contato para páginas de campanha.",
   "keywords": ["lead", "contato", "formulário", "campanha"],
   "attributes": {
+    "formId": { "type": "number", "default": 0 },
     "title": { "type": "string", "default": "Receba nossas novidades" },
     "subtitle": { "type": "string", "default": "" },
     "buttonText": { "type": "string", "default": "Quero receber" },
